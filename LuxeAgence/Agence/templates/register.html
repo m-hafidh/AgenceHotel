@@ -1,0 +1,55 @@
+
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="container ml-7">
+    <div class="row mt-5 mb-5 shadow">
+        <div class="col-lg-6 shadow p-4">
+            <h3>Creer votre compte</h3>
+            <form>
+                <!-- creation du champ nom -->
+                <div class="form-group">
+                    <label for="exampleInputText1">Prenom </label>
+                    <input type="text" class="form-control" id="exampleInputText1" aria-describedby="textHelp">
+                  </div>
+                  <!-- creation du champ prenom -->
+
+                  <div class="form-group">
+                    <label for="exampleInputText1"> Nom</label>
+                    <input type="text" class="form-control" id="exampleInputText1" aria-describedby="textHelp">
+                  </div>
+                  <!-- creation du champ email -->
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Adresse e-mail</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <small id="emailHelp" class="form-text text-muted">Nous n'allons jamais partager votre email.</small>
+                </div>
+                <!-- creation du champ mot de passe  -->
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Repeter votre mot de passe</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <!-- creation du champ mot de passe  -->
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Mot de passe</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Selectionner</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Creer votre  compte</button>
+              </form>
+
+        </div>
+        <div class="col-lg-6">
+            <img src="https://www.quebecvacances.com/images/photos/photos_600_400/hotel_quebec_1.jpg" alt="" class="img-fluid img-reponsive"> 
+        </div>
+    </div>
+</div>
+
+    {% endblock%}
