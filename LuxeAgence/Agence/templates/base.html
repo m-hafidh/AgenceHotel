@@ -30,13 +30,13 @@
               <a class="nav-link text-white" href="#">A propos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white " href="#">Contactez-nous</a>
+              <a class="nav-link text-white " href="{% url 'contact' %}">Contactez-nous</a>
             </li>
             <li class="nav-item active ml-5">
                 <a class="nav-link btn btn-success text-white" href="{% url 'login' %}">Connexion </a>
               </li>
               <li class="nav-item active ml-4"> <!--ml-5 pour les espaces -->
-                <a class="nav-link btn btn-info text-white" href="{% url 'register' %}">S'enregistrer </a>
+                <a class="nav-link btn btn-info text-white" href="{% url 'register' %}">S'inscrir </a>
               </li>
           </ul>
         </div>

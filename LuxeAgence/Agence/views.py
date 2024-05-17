@@ -15,5 +15,9 @@ def login(request):
 def register(request):
     return render(request, 'register.html')
 
+       #Creation d'une fonction pour la page Register
+def contact(request):
+    return render(request, 'contact.html')
+
 
 
