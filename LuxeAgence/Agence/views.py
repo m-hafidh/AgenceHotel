@@ -19,5 +19,13 @@ def register(request):
 def contact(request):
     return render(request, 'contact.html')
 
+ #Creation d'une fonction pour la page A propos
+def apropos(request):
+    return render(request, 'apropos.html')
+
+ #Creation d'une fonction pour la page Galerie
+def galerie(request):
+    return render(request, 'galerie.html')
+
 
 

@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <title>Mon Angence </title>
   </head>
@@ -14,6 +15,7 @@
    
     <nav class="navbar navbar-expand-lg navbar-light bg-light bg-dark shadow"> <!-- pour mettre la couleur au nav-->
         <div class="container "> <!-- ce div a pour objectif de deplacer un peu le nav -->
+
         <a class="navbar-brand text-white" href="#">Agence Hotel</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -24,10 +26,10 @@
               <a class="nav-link text-white" href="/">Acueil <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="#">Galerie</a>
+              <a class="nav-link text-white" href="{% url 'galerie' %}">Galerie</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="#">A propos</a>
+              <a class="nav-link text-white" href="{% url 'apropos' %}">A propos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-white " href="{% url 'contact' %}">Contactez-nous</a>
@@ -36,7 +38,7 @@
                 <a class="nav-link btn btn-success text-white" href="{% url 'login' %}">Connexion </a>
               </li>
               <li class="nav-item active ml-4"> <!--ml-5 pour les espaces -->
-                <a class="nav-link btn btn-info text-white" href="{% url 'register' %}">S'inscrir </a>
+                <a class="nav-link btn btn-info text-white" href="{% url 'register' %}">S'inscrire </a>
               </li>
           </ul>
         </div>
@@ -47,9 +49,162 @@
 
     {% endblock%}
 
-    <footer class="bg-dark p-3">
+    <!-- <footer class="bg-dark p-5">
         <p class="text-center text-white"> Tout droit reserver, developper par hafidhoou@</p>
-    </footer>
+    </footer> -->
+    
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+
+
+  <!-- Remove the container if you want to extend the Footer to full width. -->
+
+
+  <!-- Footer -->
+  <footer
+          class="text-center text-lg-start text-white"
+          style="background-color: #1c2331"
+          >
+    <!-- Section: Social media -->
+    <section
+             class="d-flex justify-content-between p-4"
+             style="background-color: #6351ce"
+             >
+      <!-- Left -->
+      <div class="me-5">
+        <span>Vous pouvez nous contactez à travers nos reseaux sociaux:</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold">Agence Hotel</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+              une offre de voyage complète !
+              Toutes les offres de voyage sont au bout de vos doigts :
+              hôtel, activités, séjour, weekend.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">TOP DESTINATIONS</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+              <a href="#!" class="text-white">Karthala</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white"> XXXXXXXXXX</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white"> YYYYYYYYYYY</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white"> ZZZZZZZZZZZZ</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">NOS OFFRES</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+              <a href="#!" class="text-white">Hotels</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Sejours</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Week-end</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Activités</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Contact</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p><i class="fas fa-home mr-3"></i> Comoros | Moroni</p>
+            <p><i class="fas fa-envelope mr-3"></i> agenceinfo@gmail.com</p>
+            <p><i class="fas fa-phone mr-3"></i> + 269 332 12 56</p>
+            <p><i class="fas fa-print mr-3"></i> + 269 432 12 56</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div
+         class="text-center p-3"
+         style="background-color: rgba(0, 0, 0, 0.2)"
+         >
+      © 2024 Tout droit reserver par:
+      <a class="text-white" href="#">Haf-Comoros</a>
+        
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+</div>
+<!-- End of .container -->
+
+
+<!-- End of .container -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
