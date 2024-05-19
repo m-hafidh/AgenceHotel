@@ -4,7 +4,10 @@
 {% block content %}
 <!-- Toujours les contenu a l'interier de ce block -->
 
-<div class="container mt-5 mb-5 shadow ">
+<div method = "POST" action ="" class="container mt-5 mb-5 shadow "> 
+  
+  {% csrf_token %}
+  {{ form }}
     <div class="row ml-5">
         <!-- <div class="col-lg-6 shadow p-4"> -->
     <!-- pour le text-->
@@ -12,8 +15,8 @@
 
     <form class="row g-3 ">
         <div class="col-md-6 ">
-            <label for="inputEmail4" class="form-label">Prenom</label>
-            <input type="email" class="form-control" id="inputEmail4">
+            <label for="inputText4" class="form-label">Prenom</label>
+            <input type="Text" class="form-control" id="inputText4">
           </div>
           <div class="col-md-6">
             <label for="inputText4" class="form-label">Nom</label>
@@ -25,8 +28,8 @@
           <input type="email" class="form-control" id="inputEmail4">
         </div>
         <div class="col-md-6">
-          <label for="inputText4" class="form-label">Adresse</label>
-          <input type="Text" class="form-control" id="inputText4" placeholder="1234 Main St">
+          <label for="inputText4" class="form-label">Objet</label>
+          <input type="Text" class="form-control" id="inputText4">
         </div>
 
         <div class="col-12 mb-5">

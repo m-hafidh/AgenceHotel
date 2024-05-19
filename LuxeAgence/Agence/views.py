@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render , redirect
+from . forms import ContactForm  #importation de notre formulaire contact
 
 # Create your views here.
 
@@ -17,6 +18,14 @@ def register(request):
 
        #Creation d'une fonction pour la page Register
 def contact(request):
+    #on appelle  la ethode Poste pour l'envoie de formulaire 
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid(): #si le formulaire est valide, envoyer 
+            form.save() #enrgister si il est valide 
+            return redirect("base.html") #redirection vers la page d'accueil 
+            form = ContactForm
+            context = {"form" : form }
     return render(request, 'contact.html')
 
  #Creation d'une fonction pour la page A propos
