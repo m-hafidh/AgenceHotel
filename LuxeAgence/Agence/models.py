@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib import admin  #importation de l'admin
 
+
 # Create your models here.
 
 # on ecree notre model contact
@@ -16,4 +17,6 @@ class Contact (models.Model):
     #creeons un autre class pour la visualisation de l'admin
    # class ContactAdmin(admin.ModelAdmin):
        # list_display = ("prenom","nom","email","objet","message","date") 
+    
+    
     

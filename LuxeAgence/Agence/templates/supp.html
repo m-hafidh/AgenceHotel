@@ -1,20 +1,12 @@
-{% extends "base.html" %}
-
-
-{% block content %}
-<!-- Toujours les contenu a l'interier de ce block -->
-
 <div class="container mt-5 mb-5 shadow "> 
-  
-  
     <div class="row ml-5">
         <!-- <div class="col-lg-6 shadow p-4"> -->
     <!-- pour le text-->
     <h3  class="mb-3 ">Contactez-nous</h3>
 
-    <form  action method = "POST"  class="row g-3 ">
+    <form  method = "POST" action=""  class="row g-3 ">
       {% csrf_token %}
-      {{ form.as_p }}
+     {{ form.as_p }}
         <div class="col-md-6 ">
             <label for="inputText4" class="form-label">Prenom</label>
             <input type="Text" class="form-control" id="inputText4">
@@ -44,7 +36,3 @@
       </form>
 </div>
 </div>
-<!-- </div> -->
-
-
-{% endblock%}
