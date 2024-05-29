@@ -8,7 +8,7 @@ from django.contrib import admin
 urlpatterns = [
     #path('', include('Contact.urls')),
     path('admin/', admin.site.urls),
-    path('test/', views.test, name='test'),
+    
     path('contact/', views.contact, name="contact"),#la vue de la page contact
 
     path('', home, name="home"), #la vue de lan page d'accueil
@@ -17,5 +17,6 @@ urlpatterns = [
     #path('contact', contact, name="contact"),#la vue de la page contact
     path('apropos', apropos, name="apropos"),#la vue de la page a propos
     path('galerie', galerie, name="galerie"),#la vue de la page galerie
+    path('visiter', visiter, name="visiter"),#la vue de la page visiter (page1)
     
 ]

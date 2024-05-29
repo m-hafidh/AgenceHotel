@@ -5,10 +5,7 @@ from . import models
 from . models import Contact
 
 
-class testForm(forms.Form):
-   name = forms.CharField(required=False)
-   email = forms.EmailField()
-   message = forms.CharField(max_length=1000)
+
 
 
 class ContactForm(forms.ModelForm):

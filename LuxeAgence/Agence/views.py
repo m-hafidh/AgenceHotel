@@ -6,20 +6,32 @@ from .models import Contact
 from .import models
 from django import forms
 
-from .forms import testForm
+
 
 
 
 
 
 # Create your views here.
-def test(request):
-  form = testForm()  # ajout d’un nouveau formulaire ici
-  return render(request,'test.html',
-          {'form': form})  # passe ce formulaire au gabarit
 
-#Creation d'une fonction pour la page accueil
+#Creation d'une fonction pour la page accueil (envoyer les informations a la base de données )
 def home(request):
+    if request.method=="POST":
+        contact=Contact()
+        prenom=request.POST.get("prenom")
+        nom=request.POST.get("nom")
+        email=request.POST.get("email")
+        objet=request.POST.get("objet")
+        message=request.POST.get("message")
+
+        contact.prenom=prenom
+        contact.nom=nom
+        contact.email=email
+        contact.objet=objet
+        contact.message=message
+        contact.save()
+        return HttpResponse("<h1> Merci de nous avoir contactez </h1>")
+        
     return render(request, 'home.html')
 
     #Creation d'une fonction pour la page Login
@@ -54,6 +66,10 @@ def apropos(request):
  #Creation d'une fonction pour la page Galerie
 def galerie(request):
     return render(request, 'galerie.html')
+
+#Creation d'une fonction pour la page visiter (page1)
+def visiter(request):
+    return render(request, 'visiter.html')
 
 
 

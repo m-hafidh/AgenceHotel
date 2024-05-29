@@ -11,37 +11,38 @@
         <!-- <div class="col-lg-6 shadow p-4"> -->
     <!-- pour le text-->
     <h3  class="mb-3 ">Contactez-nous</h3>
-
-    <form  action method = "POST"  class="row g-3 ">
+    <div class class="container">
+    <form   method = "POST" action="#" class="row g-3 was-validated ">
       {% csrf_token %}
       {{ form.as_p }}
         <div class="col-md-6 ">
-            <label for="inputText4" class="form-label">Prenom</label>
-            <input type="Text" class="form-control" id="inputText4">
+            <label for="inputText4" class="form-label">Votre prenom</label>
+            <input name = "prenom" type="Text" class="form-control" id="inputText4" required>
           </div>
           <div class="col-md-6">
-            <label for="inputText4" class="form-label">Nom</label>
-            <input type="Text" class="form-control" id="inputText4" >
+            <label for="inputText4" class="form-label">Votre nom</label>
+            <input name = "nom" type="Text" class="form-control" id="inputText4"  required>
           </div>
         
         <div class="col-md-6">
-          <label for="inputEmail4" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputEmail4">
+          <label for="inputEmail4" class="form-label">Votre email</label>
+          <input name="email" type="email" class="form-control" id="inputEmail4" required>
         </div>
         <div class="col-md-6">
-          <label for="inputText4" class="form-label">Objet</label>
-          <input type="Text" class="form-control" id="inputText4">
+          <label for="inputText4" class="form-label">Votre objet</label>
+          <input name="objet" type="Text" class="form-control" id="inputText4" required>
         </div>
 
         <div class="col-12 mb-5">
-          <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-          <textarea type="text" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <label for="exampleFormControlTextarea1" class="form-label">Votre message</label>
+          <textarea name="message"type="text" class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
         </div>
        
         <div class="col-12 mb-5  ">
           <button type="submit" class="btn btn-primary btn-lg btn-block">Contactez-nous</button>
         </div>
       </form>
+    </div>
 </div>
 </div>
 <!-- </div> -->
